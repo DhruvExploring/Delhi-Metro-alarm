@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Metro Alarm</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #ff6600; /* Delhi Metro Orange */
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #ff6600;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #ff6600;
+            color: white;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #alarmStatus {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        #locationStatus {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚇 Delhi Metro Alarm</h1>
+    <p>Get an alarm when you reach your metro station!</p>
+    
+    <select id="metroStation">
+        <option value="">-- Select a Station --</option>
+        <!-- Stations will be added via JavaScript -->
+    </select>
+    <br>
+    <button id="startAlarm">Start Alarm</button>
+    <button id="stopAlarm" disabled>Stop Alarm</button>
+    
+    <p id="alarmStatus">🔴 Alarm: OFF</p>
+    <p id="locationStatus">📍 Enable location access to begin.</p>
+
+    <script src="app.js"></script>
+</body>
+</html>
